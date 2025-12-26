@@ -1,0 +1,82 @@
+
+css
+/* --- NAVIGATION LINK UNDERLINE EFFECT --- */
+.nav-links a::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+background-color: var(--accent-color);
+bottom: -5px;
+left: 50%;
+transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-links a:hover::after {
+width: 100%;
+left: 0;
+}
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+.nav-links {
+flex-direction: column;
+gap: 15px;
+align-items: center;
+}
+nav {
+flex-direction: column;
+height: auto;
+padding: 10px 0;
+}
+.section-title {
+font-size: 2rem; /* Slightly smaller on mobile */
+}
+.btn {
+padding: 10px 24px; /* Simplified button padding /
+font-size: 0.9rem;   / Font size for buttons in mobile */
+}
+}
+/* --- FOOTER STYLES --- */
+footer {
+background-color: var(--primary-color);
+color: var(--white);
+padding: 40px 20px;
+text-align: center;
+}
+.footer-links {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+.footer-links a {
+color: var(--white);
+transition: color var(--transition);
+}
+.footer-links a:hover {
+color: var(--accent-color);
+}
+/* --- CARD COMPONENT STYLES --- */
+.card {
+background-color: var(--coffee-light);
+border-radius: 10px;
+box-shadow: var(--shadow);
+padding: 20px;
+margin: 20px 0;
+transition: transform var(--transition);
+}
+.card:hover {
+transform: translateY(-5px); /* Elevation effect on hover */
+}
+.card-title {
+font-size: 1.5rem;
+color: var(--coffee-dark);
+margin-bottom: 10px;
+}
+.card-content {
+color: var(--text-light);
+}
+/* --- FINAL STYLES --- /
+button:focus, a:focus {
+outline: none; / Remove default outline /
+box-shadow: 0 0 0 4px var(--accent-color); / Custom focus style */
+}
